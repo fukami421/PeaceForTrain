@@ -16,9 +16,35 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="p8j-rf-M1n">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="vTi-te-zeh"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijX-3f-6JR">
+                    <rect key="frame" x="8" y="178" width="398" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="QHm-gC-XE6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="secondarySystemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="p8j-rf-M1n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BpR-WT-nh7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ijX-3f-6JR" secondAttribute="trailing" constant="8" id="DRQ-8J-2sy"/>
+                <constraint firstItem="p8j-rf-M1n" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HIq-c6-yZb"/>
+                <constraint firstItem="ijX-3f-6JR" firstAttribute="top" secondItem="p8j-rf-M1n" secondAttribute="bottom" constant="90" id="N1u-3s-dhm"/>
+                <constraint firstItem="ijX-3f-6JR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="Wlu-yb-uTA"/>
+                <constraint firstItem="p8j-rf-M1n" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="trh-KU-zdV"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="226" y="133"/>
+            <point key="canvasLocation" x="224.63768115942031" y="132.58928571428572"/>
         </view>
     </objects>
 </document>

@@ -8,20 +8,9 @@
 
 import UIKit
 
-class LoginViewController: UIView {
-       override init(frame: CGRect){
-           super.init(frame: frame)
-           loadNib()
-       }
-    
-       required init(coder aDecoder: NSCoder) {
-           super.init(coder: aDecoder)!
-           loadNib()
-       }
-    
-       func loadNib(){
-           let view = Bundle.main.loadNibNamed("LoginViewController", owner: self, options: nil)?.first as! UIView
-           view.frame = self.bounds
-           self.addSubview(view)
+class LoginViewController: UIViewController {
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           self.title = "ログイン"
        }
 }

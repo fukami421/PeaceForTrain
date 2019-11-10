@@ -13,30 +13,60 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="LoginViewController" customModule="PeaceForTrain" customModuleProvider="target">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="初めまして" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dem-E2-GoI">
-                    <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザーネーム" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AfU-sa-PzV">
+                    <rect key="frame" x="0.0" y="80" width="414" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="es1-y4-Qko">
+                    <rect key="frame" x="0.0" y="114" width="414" height="34"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="70" id="ITi-K1-haK"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="582-f6-Yqz"/>
+                        <constraint firstAttribute="height" constant="34" id="nLY-9r-fTG"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoP-ee-UMD">
+                    <rect key="frame" x="8" y="156" width="398" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="AfX-2H-shF"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワードを忘れた方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjp-Hm-uwG">
+                    <rect key="frame" x="8" y="194" width="398" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ZrR-Gs-CsG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="dem-E2-GoI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0QF-Lv-CIV"/>
-                <constraint firstItem="dem-E2-GoI" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6Qm-Au-w4V"/>
-                <constraint firstItem="dem-E2-GoI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QDL-kc-utR"/>
+                <constraint firstItem="AfU-sa-PzV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Rv-6x-F2n"/>
+                <constraint firstItem="es1-y4-Qko" firstAttribute="top" secondItem="AfU-sa-PzV" secondAttribute="bottom" id="4LW-do-i3d"/>
+                <constraint firstItem="XoP-ee-UMD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ENm-pC-Bdy"/>
+                <constraint firstItem="es1-y4-Qko" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Min-2P-WCc"/>
+                <constraint firstItem="es1-y4-Qko" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Oxc-HH-ZT5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XoP-ee-UMD" secondAttribute="trailing" constant="8" id="Pwy-jx-Gsm"/>
+                <constraint firstItem="Pjp-Hm-uwG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="QLH-C4-tMD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pjp-Hm-uwG" secondAttribute="trailing" constant="8" id="oNI-eW-y9h"/>
+                <constraint firstItem="AfU-sa-PzV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oeC-tU-mgn"/>
+                <constraint firstItem="XoP-ee-UMD" firstAttribute="top" secondItem="es1-y4-Qko" secondAttribute="bottom" constant="8" id="rFK-DY-eA0"/>
+                <constraint firstItem="AfU-sa-PzV" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="wvN-7h-AdW"/>
+                <constraint firstItem="Pjp-Hm-uwG" firstAttribute="top" secondItem="XoP-ee-UMD" secondAttribute="bottom" constant="8" id="yzk-vf-1cG"/>
             </constraints>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="361" y="179"/>
+            <point key="canvasLocation" x="360.86956521739131" y="178.79464285714286"/>
         </view>
     </objects>
 </document>

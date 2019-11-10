@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignViewController" customModule="PeaceForTrain" customModuleProvider="target">
             <connections>
+                <outlet property="segment" destination="8uh-hz-rdu" id="vg2-bq-MNQ"/>
+                <outlet property="segmentView" destination="WyM-70-KgG" id="VB4-jB-1TV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,13 +28,24 @@
                         <segment title="First"/>
                         <segment title="Second"/>
                     </segments>
+                    <connections>
+                        <action selector="segmentButton:" destination="-1" eventType="valueChanged" id="CpU-Ql-xiP"/>
+                    </connections>
                 </segmentedControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WyM-70-KgG">
+                    <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="WyM-70-KgG" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="5rX-jY-XrG"/>
                 <constraint firstItem="8uh-hz-rdu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9Ix-SR-2gh"/>
+                <constraint firstItem="WyM-70-KgG" firstAttribute="top" secondItem="8uh-hz-rdu" secondAttribute="bottom" id="HCz-Qf-QTY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8uh-hz-rdu" secondAttribute="trailing" constant="20" id="N4h-fY-209"/>
                 <constraint firstItem="8uh-hz-rdu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TIk-v2-0mU"/>
+                <constraint firstItem="WyM-70-KgG" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="ZVB-dR-4D4"/>
+                <constraint firstItem="WyM-70-KgG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iMS-yE-PEa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
