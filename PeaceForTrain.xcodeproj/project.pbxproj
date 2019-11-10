@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		299FC1A2E53CA7B8B3ACE251 /* Pods_PeaceForTrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27CB4E0AC1616DE9D933487 /* Pods_PeaceForTrain.framework */; };
 		38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F682377FDDA008D6A52 /* AppDelegate.swift */; };
 		38895F6B2377FDDA008D6A52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F6A2377FDDA008D6A52 /* SceneDelegate.swift */; };
 		38895F6D2377FDDA008D6A52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F6C2377FDDA008D6A52 /* ContentView.swift */; };
@@ -15,6 +16,12 @@
 		38895F752377FDDD008D6A52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38895F732377FDDD008D6A52 /* LaunchScreen.storyboard */; };
 		38895F802377FDDD008D6A52 /* PeaceForTrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F7F2377FDDD008D6A52 /* PeaceForTrainTests.swift */; };
 		38895F8B2377FDDD008D6A52 /* PeaceForTrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F8A2377FDDD008D6A52 /* PeaceForTrainUITests.swift */; };
+		38895F9E23780072008D6A52 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38895F9C23780072008D6A52 /* LoginViewController.xib */; };
+		38895FA523780529008D6A52 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895FA323780529008D6A52 /* SignUpViewController.swift */; };
+		38895FA623780529008D6A52 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38895FA423780529008D6A52 /* SignUpViewController.xib */; };
+		38895FB1237832C9008D6A52 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F9B23780072008D6A52 /* LoginViewController.swift */; };
+		38895FB4237834A1008D6A52 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895FB2237834A1008D6A52 /* SignViewController.swift */; };
+		38895FB5237834A1008D6A52 /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38895FB3237834A1008D6A52 /* SignViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,15 @@
 		38895F862377FDDD008D6A52 /* PeaceForTrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeaceForTrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38895F8A2377FDDD008D6A52 /* PeaceForTrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeaceForTrainUITests.swift; sourceTree = "<group>"; };
 		38895F8C2377FDDD008D6A52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38895F9B23780072008D6A52 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		38895F9C23780072008D6A52 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		38895FA323780529008D6A52 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		38895FA423780529008D6A52 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		38895FB2237834A1008D6A52 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		38895FB3237834A1008D6A52 /* SignViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
+		72DBCEA10F976F54874B5743 /* Pods-PeaceForTrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeaceForTrain.debug.xcconfig"; path = "Target Support Files/Pods-PeaceForTrain/Pods-PeaceForTrain.debug.xcconfig"; sourceTree = "<group>"; };
+		C27CB4E0AC1616DE9D933487 /* Pods_PeaceForTrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeaceForTrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFBA2BBAD0167C3F1D250EA1 /* Pods-PeaceForTrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeaceForTrain.release.xcconfig"; path = "Target Support Files/Pods-PeaceForTrain/Pods-PeaceForTrain.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299FC1A2E53CA7B8B3ACE251 /* Pods_PeaceForTrain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,8 @@
 				38895F7E2377FDDD008D6A52 /* PeaceForTrainTests */,
 				38895F892377FDDD008D6A52 /* PeaceForTrainUITests */,
 				38895F662377FDDA008D6A52 /* Products */,
+				6F385320C7F27B9BB85EF40B /* Pods */,
+				3F9A04E60F795F0914CF1A4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +118,9 @@
 		38895F672377FDDA008D6A52 /* PeaceForTrain */ = {
 			isa = PBXGroup;
 			children = (
+				38895F9A23780059008D6A52 /* Models */,
+				38895F9923780052008D6A52 /* ViewModels */,
+				38895F9823780047008D6A52 /* Views */,
 				38895F682377FDDA008D6A52 /* AppDelegate.swift */,
 				38895F6A2377FDDA008D6A52 /* SceneDelegate.swift */,
 				38895F6C2377FDDA008D6A52 /* ContentView.swift */,
@@ -136,6 +158,50 @@
 			path = PeaceForTrainUITests;
 			sourceTree = "<group>";
 		};
+		38895F9823780047008D6A52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38895F9B23780072008D6A52 /* LoginViewController.swift */,
+				38895F9C23780072008D6A52 /* LoginViewController.xib */,
+				38895FA323780529008D6A52 /* SignUpViewController.swift */,
+				38895FA423780529008D6A52 /* SignUpViewController.xib */,
+				38895FB2237834A1008D6A52 /* SignViewController.swift */,
+				38895FB3237834A1008D6A52 /* SignViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38895F9923780052008D6A52 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		38895F9A23780059008D6A52 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F9A04E60F795F0914CF1A4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C27CB4E0AC1616DE9D933487 /* Pods_PeaceForTrain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F385320C7F27B9BB85EF40B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72DBCEA10F976F54874B5743 /* Pods-PeaceForTrain.debug.xcconfig */,
+				CFBA2BBAD0167C3F1D250EA1 /* Pods-PeaceForTrain.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38895F8F2377FDDD008D6A52 /* Build configuration list for PBXNativeTarget "PeaceForTrain" */;
 			buildPhases = (
+				436A7CC2E90630DAEBD35146 /* [CP] Check Pods Manifest.lock */,
 				38895F612377FDDA008D6A52 /* Sources */,
 				38895F622377FDDA008D6A52 /* Frameworks */,
 				38895F632377FDDA008D6A52 /* Resources */,
+				C11DDEE98B1092841A3BC270 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,8 +308,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38895F9E23780072008D6A52 /* LoginViewController.xib in Resources */,
+				38895FB5237834A1008D6A52 /* SignViewController.xib in Resources */,
 				38895F752377FDDD008D6A52 /* LaunchScreen.storyboard in Resources */,
 				38895F722377FDDD008D6A52 /* Preview Assets.xcassets in Resources */,
+				38895FA623780529008D6A52 /* SignUpViewController.xib in Resources */,
 				38895F6F2377FDDD008D6A52 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,11 +333,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		436A7CC2E90630DAEBD35146 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeaceForTrain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C11DDEE98B1092841A3BC270 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeaceForTrain/Pods-PeaceForTrain-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeaceForTrain/Pods-PeaceForTrain-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeaceForTrain/Pods-PeaceForTrain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38895F612377FDDA008D6A52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38895FB1237832C9008D6A52 /* LoginViewController.swift in Sources */,
+				38895FB4237834A1008D6A52 /* SignViewController.swift in Sources */,
+				38895FA523780529008D6A52 /* SignUpViewController.swift in Sources */,
 				38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */,
 				38895F6B2377FDDA008D6A52 /* SceneDelegate.swift in Sources */,
 				38895F6D2377FDDA008D6A52 /* ContentView.swift in Sources */,
@@ -432,6 +548,7 @@
 		};
 		38895F902377FDDD008D6A52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72DBCEA10F976F54874B5743 /* Pods-PeaceForTrain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +569,7 @@
 		};
 		38895F912377FDDD008D6A52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFBA2BBAD0167C3F1D250EA1 /* Pods-PeaceForTrain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
