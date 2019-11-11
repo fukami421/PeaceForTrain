@@ -25,8 +25,8 @@
                         <constraint firstAttribute="height" constant="30" id="x2k-qa-GiL"/>
                     </constraints>
                     <segments>
-                        <segment title="First"/>
-                        <segment title="Second"/>
+                        <segment title="SignUp"/>
+                        <segment title="SignIn"/>
                     </segments>
                     <connections>
                         <action selector="segmentButton:" destination="-1" eventType="valueChanged" id="CpU-Ql-xiP"/>

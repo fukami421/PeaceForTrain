@@ -15,4 +15,5 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         self.title = "SignUp"
     }
+    //todo: radio button
 }
