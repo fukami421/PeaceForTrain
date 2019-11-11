@@ -86,13 +86,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd7-7i-slD">
-                    <rect key="frame" x="20" y="415" width="374" height="77"/>
+                    <rect key="frame" x="20" y="415" width="374" height="126"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="77" id="MFW-FP-DJd"/>
+                        <constraint firstAttribute="height" constant="126" id="MFW-FP-DJd"/>
                     </constraints>
                 </pickerView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Le0-NR-ixU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0Nb-Nx-jFg"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ijX-3f-6JR" secondAttribute="trailing" constant="20" id="2g9-ry-mer"/>

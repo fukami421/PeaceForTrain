@@ -22,8 +22,9 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "SignUp"
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        self.pickerView.delegate = self
+        self.pickerView.dataSource = self
+        self.pickerView.selectRow(2, inComponent: 0, animated: true)// 初期値を20代に設定
     }
 }
 

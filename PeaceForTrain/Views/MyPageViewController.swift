@@ -13,5 +13,6 @@ class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MyPage"
+        // todo: ログアウトの定義
     }
 }
