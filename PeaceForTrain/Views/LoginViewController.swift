@@ -9,8 +9,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-       override func viewDidLoad() {
-           super.viewDidLoad()
-           self.title = "ログイン"
-       }
+    let tabVC = TabViewController.init(nibName: nil, bundle: nil)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "ログイン"
+        self.tabVC.modalPresentationStyle = .fullScreen
+    }
+    @IBAction func loginBtn(_ sender: Any) {
+        self.present(self.tabVC, animated: true, completion: nil)
+    }
 }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		299FC1A2E53CA7B8B3ACE251 /* Pods_PeaceForTrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27CB4E0AC1616DE9D933487 /* Pods_PeaceForTrain.framework */; };
+		383657642378E092008A92FC /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383657632378E092008A92FC /* TabViewController.swift */; };
+		383657672378E0EF008A92FC /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383657652378E0EF008A92FC /* MyPageViewController.swift */; };
+		383657682378E0EF008A92FC /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383657662378E0EF008A92FC /* MyPageViewController.xib */; };
+		3836576B2378E13C008A92FC /* ExchangeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383657692378E13C008A92FC /* ExchangeHomeViewController.swift */; };
+		3836576C2378E13C008A92FC /* ExchangeHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3836576A2378E13C008A92FC /* ExchangeHomeViewController.xib */; };
 		38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F682377FDDA008D6A52 /* AppDelegate.swift */; };
 		38895F6B2377FDDA008D6A52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F6A2377FDDA008D6A52 /* SceneDelegate.swift */; };
 		38895F6D2377FDDA008D6A52 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F6C2377FDDA008D6A52 /* ContentView.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		383657632378E092008A92FC /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		383657652378E0EF008A92FC /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		383657662378E0EF008A92FC /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
+		383657692378E13C008A92FC /* ExchangeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeHomeViewController.swift; sourceTree = "<group>"; };
+		3836576A2378E13C008A92FC /* ExchangeHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeHomeViewController.xib; sourceTree = "<group>"; };
 		38895F652377FDDA008D6A52 /* PeaceForTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeaceForTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38895F682377FDDA008D6A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38895F6A2377FDDA008D6A52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +177,11 @@
 				38895FA423780529008D6A52 /* SignUpViewController.xib */,
 				38895FB2237834A1008D6A52 /* SignViewController.swift */,
 				38895FB3237834A1008D6A52 /* SignViewController.xib */,
+				383657632378E092008A92FC /* TabViewController.swift */,
+				383657652378E0EF008A92FC /* MyPageViewController.swift */,
+				383657662378E0EF008A92FC /* MyPageViewController.xib */,
+				383657692378E13C008A92FC /* ExchangeHomeViewController.swift */,
+				3836576A2378E13C008A92FC /* ExchangeHomeViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -308,7 +323,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383657682378E0EF008A92FC /* MyPageViewController.xib in Resources */,
 				38895F9E23780072008D6A52 /* LoginViewController.xib in Resources */,
+				3836576C2378E13C008A92FC /* ExchangeHomeViewController.xib in Resources */,
 				38895FB5237834A1008D6A52 /* SignViewController.xib in Resources */,
 				38895F752377FDDD008D6A52 /* LaunchScreen.storyboard in Resources */,
 				38895F722377FDDD008D6A52 /* Preview Assets.xcassets in Resources */,
@@ -380,12 +397,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3836576B2378E13C008A92FC /* ExchangeHomeViewController.swift in Sources */,
 				38895FB1237832C9008D6A52 /* LoginViewController.swift in Sources */,
 				38895FB4237834A1008D6A52 /* SignViewController.swift in Sources */,
 				38895FA523780529008D6A52 /* SignUpViewController.swift in Sources */,
 				38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */,
 				38895F6B2377FDDA008D6A52 /* SceneDelegate.swift in Sources */,
+				383657642378E092008A92FC /* TabViewController.swift in Sources */,
 				38895F6D2377FDDA008D6A52 /* ContentView.swift in Sources */,
+				383657672378E0EF008A92FC /* MyPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
