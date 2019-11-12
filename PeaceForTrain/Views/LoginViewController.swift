@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var mailTxtField: UITextField!
     let tabVC = TabViewController.init(nibName: nil, bundle: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
