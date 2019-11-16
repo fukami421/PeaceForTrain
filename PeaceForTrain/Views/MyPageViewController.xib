@@ -83,7 +83,7 @@
                     <state key="normal" title="更新"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GWJ-KL-MfA" secondAttribute="trailing" constant="20" id="1ZX-D8-4JQ"/>
                 <constraint firstItem="tMT-kv-gdE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="7Rm-cU-pqr"/>

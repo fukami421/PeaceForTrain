@@ -21,9 +21,9 @@ class SignUpViewModel {
         
     }
 
-    func api() -> Bool
+    func api() -> Int
     {
-        var canSignUp = false
+        var canSignUp = 2
         var keepAlive = true
         print(self.name.value)
         print(self.password.value)

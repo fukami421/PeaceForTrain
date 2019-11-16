@@ -48,6 +48,7 @@ class SignUpViewController: UIViewController {
         self.activityIndicator.isHidden = true
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         self.activityIndicator.transform = transfrom
+        self.passTxtField.isSecureTextEntry = true
     }
 
     func bind()
@@ -96,12 +97,20 @@ class SignUpViewController: UIViewController {
                 self.activityIndicator.startAnimating()
                 self.activityIndicator.isHidden = false
                 let canLogin = self.signUpViewModel.api()
-                if canLogin == true
+                if canLogin == 0
                 {
                     self.activityIndicator.isHidden = true
                     self.activityIndicator.stopAnimating()
                     self.setUserDefault(mail: self.mailTxtField.text!, gender: self.gender, old: self.old)
                     self.present(self.tabVC, animated: true, completion: nil)
+                }else if canLogin == 1
+                {
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
+                    let alertController = Alert.showAlert(title: "エラー", message: "そのメールアドレスは既に登録されています")
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
+                    self.present(alertController, animated: true)
                 }else
                 {
                     self.activityIndicator.isHidden = true
@@ -110,6 +119,7 @@ class SignUpViewController: UIViewController {
                     self.activityIndicator.isHidden = true
                     self.activityIndicator.stopAnimating()
                     self.present(alertController, animated: true)
+
                 }
             }else
             {

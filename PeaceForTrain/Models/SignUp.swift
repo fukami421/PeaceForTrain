@@ -9,7 +9,7 @@
 import Foundation
 
 struct SignUp: Codable {
-    var result: Bool
+    var result: Int
 
     enum CodingKeys: String, CodingKey {
         case result
@@ -17,6 +17,6 @@ struct SignUp: Codable {
   
     init()
     {
-        self.result = false
+        self.result = 2
     }
 }

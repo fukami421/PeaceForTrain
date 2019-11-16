@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         self.activityIndicator.isHidden = true
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         self.activityIndicator.transform = transfrom
+        self.passTxtField.isSecureTextEntry = true
     }
     
     func bind()
