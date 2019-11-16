@@ -14,11 +14,11 @@ class TabViewController: UITabBarController {
         super.viewDidLoad()
         let exchangeHomeVC = UINavigationController(rootViewController: ExchangeHomeViewController.init(nibName: nil, bundle: nil))
         // タブのFooter部分を設定
-        exchangeHomeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
+        exchangeHomeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
 
         let myPageVC = UINavigationController(rootViewController: MyPageViewController.init(nibName: nil, bundle: nil))
         // タブのFooter部分を設定
-        myPageVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        myPageVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
 
         self.viewControllers = [exchangeHomeVC, myPageVC]
     }
