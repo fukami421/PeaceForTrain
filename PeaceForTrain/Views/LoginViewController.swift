@@ -11,13 +11,13 @@ import RxSwift
 import RxCocoa
 
 class LoginViewController: UIViewController {
+    let udf = UserDefaults.standard
     private let disposeBag = DisposeBag()
     let loginViewModel = LoginViewModel()
     @IBOutlet weak var mailTxtField: UITextField!
     @IBOutlet weak var passTxtField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
     let tabVC = TabViewController.init(nibName: nil, bundle: nil)
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
     func bind()
     {
         self.mailTxtField.rx.text.orEmpty
-            .bind(to: self.loginViewModel.name)
+            .bind(to: self.loginViewModel.mail)
             .disposed(by: self.disposeBag)
         
         self.passTxtField.rx.text.orEmpty
@@ -50,11 +50,11 @@ class LoginViewController: UIViewController {
             self.activityIndicator.startAnimating()
             self.activityIndicator.isHidden = false
             let canLogin = self.loginViewModel.api()
-            print(canLogin)
             if canLogin == 1
             {
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
+                self.udf.set(self.mailTxtField.text, forKey: "mail")
                 self.present(self.tabVC, animated: true, completion: nil)
             }else if canLogin == 0
             {

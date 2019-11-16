@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyPageViewController" customModule="PeaceForTrain" customModuleProvider="target">
             <connections>
+                <outlet property="genderLbl" destination="BH7-PI-oby" id="tXo-JB-i31"/>
+                <outlet property="mailLbl" destination="tMT-kv-gdE" id="xqc-ej-ogS"/>
+                <outlet property="oldLbl" destination="b0e-oK-3Ix" id="s4o-Ls-zbz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

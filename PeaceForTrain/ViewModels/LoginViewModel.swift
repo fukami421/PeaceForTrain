@@ -11,8 +11,9 @@ import RxCocoa
 import Alamofire
 
 class LoginViewModel {
+    let udf = UserDefaults.standard
     private let disposeBag = DisposeBag()
-    let name = BehaviorRelay<String>(value: "")
+    let mail = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
 
     init(){
@@ -22,10 +23,10 @@ class LoginViewModel {
     func api() -> Int
     {
         var keepAlive = true
-        print(self.name.value)
+        print(self.mail.value)
         print(self.password.value)
         let parameters:[String: Any] = [
-            "mail": self.name.value,
+            "mail": self.mail.value,
             "password": self.password.value,
         ]
         var resultNum = 1
@@ -44,6 +45,7 @@ class LoginViewModel {
                     do {
                         let tasks = try decoder.decode(Login.self, from: data)
                         resultNum = tasks.count
+                        self.setUserDefault(mail: self.mail.value, gender: tasks.gender, old: tasks.old)
                         print(resultNum)
                     } catch {
                         print("error:")
@@ -61,6 +63,13 @@ class LoginViewModel {
             runLoop.run(mode: RunLoop.Mode.default, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
         }
         return resultNum
+    }
+    
+    func setUserDefault(mail:String, gender: String, old: String)
+    {
+        self.udf.set(mail, forKey: "mail")
+        self.udf.set(gender, forKey: "gender")
+        self.udf.set(old, forKey: "old")
     }
 }
 

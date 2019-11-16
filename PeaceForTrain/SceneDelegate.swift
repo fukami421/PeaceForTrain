@@ -25,7 +25,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     if let windowScene = scene as? UIWindowScene {
         let window = UIWindow(windowScene: windowScene)
         let SignVC = UINavigationController(rootViewController: SignViewController.init(nibName: nil, bundle: nil))
-        window.rootViewController = SignVC
+        let tabVC = TabViewController.init(nibName: nil, bundle: nil)
+//        if UserDefaults.standard.object(forKey: "mail") != nil
+//        {
+//            window.rootViewController = tabVC
+//        }else
+//        {
+            window.rootViewController = SignVC
+//        }
         self.window = window
         window.makeKeyAndVisible()
     }

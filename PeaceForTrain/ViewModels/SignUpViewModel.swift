@@ -15,23 +15,26 @@ class SignUpViewModel {
     let name = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
     let gender = BehaviorRelay<String>(value: "")
-    let old = BehaviorRelay<String>(value: "")
+    let old = BehaviorRelay<String>(value: "20~29歳")
 
     init(){
         
     }
 
-    func api() -> Int
+    func api() -> Bool
     {
+        var canSignUp = false
         var keepAlive = true
         print(self.name.value)
         print(self.password.value)
         let parameters:[String: Any] = [
             "mail": self.name.value,
             "password": self.password.value,
+            "gender": self.gender.value,
+            "old": self.old.value
         ]
-        var resultNum = 0
-        let url = "http://49.212.133.185:7854/canLogin"
+        
+        let url = "http://49.212.133.185:7854/signUp"
         Alamofire.request(url, method: .post, parameters: parameters)
         .validate(statusCode: 200..<300)
         .validate(contentType: ["application/json"])
@@ -44,17 +47,14 @@ class SignUpViewModel {
                     }
                     let decoder = JSONDecoder()
                     do {
-                        let tasks = try decoder.decode(Login.self, from: data)
-                        resultNum = tasks.count
-                        print(resultNum)
+                        let tasks = try decoder.decode(SignUp.self, from: data)
+                        canSignUp = tasks.result
                     } catch {
                         print("error:")
                         print(error)
-                        resultNum = 2
                     }
                 case .failure:
                     print("Failure!")
-                    resultNum = 2
             }
             keepAlive = false
         }
@@ -62,7 +62,7 @@ class SignUpViewModel {
         while keepAlive &&
             runLoop.run(mode: RunLoop.Mode.default, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {
         }
-        return resultNum
+        return canSignUp
     }
 }
 
