@@ -8,10 +8,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SignUpViewController: UIViewController {
-
+    private let disposeBag = DisposeBag()
+    let signUpViewModel = SignUpViewModel()
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet var mailTxtField: UITextField!
+    @IBOutlet weak var passTxtField: UITextField!
+    @IBOutlet weak var segment: UISegmentedControl!
     // たくさん卒業してしまった...
     let dataList = [
         "0~9歳","10~19歳","20~29歳","30~39歳",
@@ -22,9 +28,21 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "SignUp"
+        self.bind()
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         self.pickerView.selectRow(2, inComponent: 0, animated: true)// 初期値を20代に設定
+    }
+    
+    func bind()
+    {
+        self.mailTxtField.rx.text.orEmpty
+            .bind(to: self.signUpViewModel.name)
+            .disposed(by: self.disposeBag)
+        
+        self.passTxtField.rx.text.orEmpty
+            .bind(to: self.signUpViewModel.password)
+            .disposed(by: self.disposeBag)
     }
 }
 

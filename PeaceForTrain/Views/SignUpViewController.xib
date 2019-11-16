@@ -9,7 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="PeaceForTrain" customModuleProvider="target">
             <connections>
+                <outlet property="mailTxtField" destination="EZd-dN-OMA" id="TP3-4E-9fc"/>
+                <outlet property="passTxtField" destination="lAd-eb-czN" id="88a-8G-wFt"/>
                 <outlet property="pickerView" destination="Wd7-7i-slD" id="FTH-do-Jp1"/>
+                <outlet property="segment" destination="FfG-Jt-tkr" id="nlr-lG-mX9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,7 +67,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="FfG-Jt-tkr">
-                    <rect key="frame" x="20" y="322" width="91" height="32"/>
+                    <rect key="frame" x="20" y="323" width="91" height="32"/>
                     <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31" id="sJB-tZ-NDe"/>

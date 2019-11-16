@@ -10,6 +10,7 @@ import UIKit
 
 class MyPageViewController: UIViewController {
 
+    let myPageViewModel = MyPageViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "MyPage"

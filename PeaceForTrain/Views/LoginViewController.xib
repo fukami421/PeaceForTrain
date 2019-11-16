@@ -9,7 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="PeaceForTrain" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="0z7-CM-IcH" id="dJq-3H-tlI"/>
+                <outlet property="loginBtn" destination="XoP-ee-UMD" id="CZ7-tT-Z9u"/>
                 <outlet property="mailTxtField" destination="AfU-sa-PzV" id="jnk-LC-qkV"/>
+                <outlet property="passTxtField" destination="es1-y4-Qko" id="Est-qV-cMO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,9 +43,6 @@
                     <state key="normal" title="Button">
                         <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </state>
-                    <connections>
-                        <action selector="loginBtn:" destination="-1" eventType="touchUpInside" id="gmw-hJ-cvd"/>
-                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワードを忘れた方はこちら" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjp-Hm-uwG">
                     <rect key="frame" x="8" y="194" width="398" height="21"/>
@@ -53,16 +53,25 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="0z7-CM-IcH">
+                    <rect key="frame" x="187" y="358" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="5GI-9h-q69"/>
+                        <constraint firstAttribute="height" constant="40" id="xoc-tz-wny"/>
+                    </constraints>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="AfU-sa-PzV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Rv-6x-F2n"/>
                 <constraint firstItem="es1-y4-Qko" firstAttribute="top" secondItem="AfU-sa-PzV" secondAttribute="bottom" id="4LW-do-i3d"/>
+                <constraint firstItem="0z7-CM-IcH" firstAttribute="top" secondItem="Pjp-Hm-uwG" secondAttribute="bottom" constant="143" id="7CY-xT-DEG"/>
                 <constraint firstItem="XoP-ee-UMD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="ENm-pC-Bdy"/>
                 <constraint firstItem="es1-y4-Qko" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Min-2P-WCc"/>
                 <constraint firstItem="es1-y4-Qko" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Oxc-HH-ZT5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XoP-ee-UMD" secondAttribute="trailing" constant="8" id="Pwy-jx-Gsm"/>
                 <constraint firstItem="Pjp-Hm-uwG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="QLH-C4-tMD"/>
+                <constraint firstItem="0z7-CM-IcH" firstAttribute="centerX" secondItem="Pjp-Hm-uwG" secondAttribute="centerX" id="Ril-fr-z6H"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pjp-Hm-uwG" secondAttribute="trailing" constant="8" id="oNI-eW-y9h"/>
                 <constraint firstItem="AfU-sa-PzV" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oeC-tU-mgn"/>
                 <constraint firstItem="XoP-ee-UMD" firstAttribute="top" secondItem="es1-y4-Qko" secondAttribute="bottom" constant="8" id="rFK-DY-eA0"/>
