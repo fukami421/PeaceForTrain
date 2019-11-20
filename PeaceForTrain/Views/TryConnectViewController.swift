@@ -15,6 +15,7 @@ class TryConnectViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var isGive:Bool = false
+    let tryConnectViewModel = TryConnectViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.activityIndicator.startAnimating()

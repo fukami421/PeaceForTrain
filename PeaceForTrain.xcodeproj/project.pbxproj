@@ -29,9 +29,10 @@
 		38895FB4237834A1008D6A52 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895FB2237834A1008D6A52 /* SignViewController.swift */; };
 		38895FB5237834A1008D6A52 /* SignViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38895FB3237834A1008D6A52 /* SignViewController.xib */; };
 		389F614B237AE26200121161 /* frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F614A237AE26200121161 /* frame.swift */; };
-		389F614E237AF92C00121161 /* TryConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F614C237AF92C00121161 /* TryConnect.swift */; };
+		389F614E237AF92C00121161 /* TryConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389F614C237AF92C00121161 /* TryConnectViewController.swift */; };
 		389F614F237AF92C00121161 /* TryConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389F614D237AF92C00121161 /* TryConnectViewController.xib */; };
 		38D9BE8A237FCFC700E7A4AC /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D9BE89237FCFC700E7A4AC /* SignUp.swift */; };
+		38FE7DE32384327800C415E6 /* TryConnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FE7DE22384327700C415E6 /* TryConnectViewModel.swift */; };
 		38FFF329237EC1920004C1BD /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF328237EC1920004C1BD /* LoginViewModel.swift */; };
 		38FFF32B237EDEE80004C1BD /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF32A237EDEE80004C1BD /* Login.swift */; };
 		38FFF32D237EFA510004C1BD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFF32C237EFA510004C1BD /* SignUpViewModel.swift */; };
@@ -83,9 +84,10 @@
 		38895FB2237834A1008D6A52 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		38895FB3237834A1008D6A52 /* SignViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignViewController.xib; sourceTree = "<group>"; };
 		389F614A237AE26200121161 /* frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frame.swift; sourceTree = "<group>"; };
-		389F614C237AF92C00121161 /* TryConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryConnect.swift; sourceTree = "<group>"; };
+		389F614C237AF92C00121161 /* TryConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryConnectViewController.swift; sourceTree = "<group>"; };
 		389F614D237AF92C00121161 /* TryConnectViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryConnectViewController.xib; sourceTree = "<group>"; };
 		38D9BE89237FCFC700E7A4AC /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		38FE7DE22384327700C415E6 /* TryConnectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryConnectViewModel.swift; sourceTree = "<group>"; };
 		38FFF328237EC1920004C1BD /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		38FFF32A237EDEE80004C1BD /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		38FFF32C237EFA510004C1BD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -201,7 +203,7 @@
 				383657662378E0EF008A92FC /* MyPageViewController.xib */,
 				383657692378E13C008A92FC /* ExchangeHomeViewController.swift */,
 				3836576A2378E13C008A92FC /* ExchangeHomeViewController.xib */,
-				389F614C237AF92C00121161 /* TryConnect.swift */,
+				389F614C237AF92C00121161 /* TryConnectViewController.swift */,
 				389F614D237AF92C00121161 /* TryConnectViewController.xib */,
 			);
 			path = Views;
@@ -213,6 +215,7 @@
 				385D2E4A237E8A9900B24AD9 /* MyPageViewModel.swift */,
 				38FFF328237EC1920004C1BD /* LoginViewModel.swift */,
 				38FFF32C237EFA510004C1BD /* SignUpViewModel.swift */,
+				38FE7DE22384327700C415E6 /* TryConnectViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -438,10 +441,11 @@
 				38895FB4237834A1008D6A52 /* SignViewController.swift in Sources */,
 				38895FA523780529008D6A52 /* SignUpViewController.swift in Sources */,
 				38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */,
-				389F614E237AF92C00121161 /* TryConnect.swift in Sources */,
+				389F614E237AF92C00121161 /* TryConnectViewController.swift in Sources */,
 				38895F6B2377FDDA008D6A52 /* SceneDelegate.swift in Sources */,
 				38FFF32D237EFA510004C1BD /* SignUpViewModel.swift in Sources */,
 				38FFF32B237EDEE80004C1BD /* Login.swift in Sources */,
+				38FE7DE32384327800C415E6 /* TryConnectViewModel.swift in Sources */,
 				383657642378E092008A92FC /* TabViewController.swift in Sources */,
 				38FFF329237EC1920004C1BD /* LoginViewModel.swift in Sources */,
 				38895F6D2377FDDA008D6A52 /* ContentView.swift in Sources */,
