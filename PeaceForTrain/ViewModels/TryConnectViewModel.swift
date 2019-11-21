@@ -14,10 +14,10 @@ import Alamofire
 
 class TryConnectViewModel: NSObject, CLLocationManagerDelegate {
     private let disposeBag = DisposeBag()
-    let name = BehaviorRelay<String>(value: "")
-    let password = BehaviorRelay<String>(value: "")
-    let gender = BehaviorRelay<String>(value: "")
-    let old = BehaviorRelay<String>(value: "20~29歳")
+    let distance = BehaviorRelay<String>(value: "? m")
+    let gender = BehaviorRelay<String>(value: "不明")
+    let old = BehaviorRelay<String>(value: "不明")
+    let isDisplayActivityIndicator = BehaviorRelay<Bool>(value: true)
 
     var clLocationManager:CLLocationManager!
     var beaconRegion:CLBeaconRegion!
@@ -64,6 +64,7 @@ class TryConnectViewModel: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
         //観測開始に成功したら、領域内にいるかどうかの判定をおこなう。→（didDetermineState）へ
         print("観測開始")
+        self.isDisplayActivityIndicator.accept(true)
         clLocationManager.requestState(for: self.beaconRegion)
     }
 
@@ -73,6 +74,7 @@ class TryConnectViewModel: NSObject, CLLocationManagerDelegate {
         switch (state) {
         case .inside: // すでに領域内にいる場合は（didEnterRegion）は呼ばれない
             clLocationManager.startRangingBeacons(satisfying: beaconRegion.beaconIdentityConstraint)
+            self.isDisplayActivityIndicator.accept(false)
             print("inside")
             // →(didRangeBeacons)で測定をはじめる
             break
@@ -94,6 +96,7 @@ class TryConnectViewModel: NSObject, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         // →(didRangeBeacons)で測定をはじめる
         self.clLocationManager.startRangingBeacons(satisfying: beaconRegion.beaconIdentityConstraint)
+        self.isDisplayActivityIndicator.accept(false)
         print("入ったよ")
     }
 
@@ -120,8 +123,11 @@ class TryConnectViewModel: NSObject, CLLocationManagerDelegate {
         let beacon = beacons[0] as CLBeacon //複数あった場合は一番先頭のものを処理する
 
         print(beacon.proximity.rawValue) //距離を1mごとに測る
+        self.distance.accept("約" + String(beacon.proximity.rawValue) + "m")
         if beacon.rssi == 0
         {
+            self.isDisplayActivityIndicator.accept(true)
+            self.distance.accept("不明")
             print("rssiが0や")
             self.clLocationManager.stopRangingBeacons(satisfying: self.beaconRegion.beaconIdentityConstraint)
             clLocationManager.startMonitoring(for: self.beaconRegion)
