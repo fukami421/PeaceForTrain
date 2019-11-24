@@ -30,10 +30,15 @@ class LoginViewController: UIViewController {
     
     func UISetUp()
     {
+        // ActivityIndicatorに関して
         self.activityIndicator.isHidden = true
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         self.activityIndicator.transform = transfrom
+
         self.passTxtField.isSecureTextEntry = true
+        
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
+        self.view.addGestureRecognizer(singleTapGesture)
     }
     
     func bind()
@@ -68,5 +73,10 @@ class LoginViewController: UIViewController {
             }
         }
         .disposed(by: self.disposeBag)
+    }
+
+    @objc func singleTap(_ gesture: UITapGestureRecognizer){
+        self.view.endEditing(true)
+        return
     }
 }

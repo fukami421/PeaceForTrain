@@ -45,10 +45,15 @@ class SignUpViewController: UIViewController {
 
     func UISetUp()
     {
+        // ActivityIndicatorに関して
         self.activityIndicator.isHidden = true
         let transfrom = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         self.activityIndicator.transform = transfrom
-        self.passTxtField.isSecureTextEntry = true
+
+        self.passTxtField.isSecureTextEntry = true // パスワード入力
+        
+        let singleTapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap(_:)))
+        self.view.addGestureRecognizer(singleTapGesture)
     }
 
     func bind()
@@ -146,6 +151,11 @@ class SignUpViewController: UIViewController {
         udf.set(mail, forKey: "mail")
         udf.set(gender, forKey: "gender")
         udf.set(old, forKey: "old")
+    }
+    
+    @objc func singleTap(_ gesture: UITapGestureRecognizer){
+        self.view.endEditing(true)
+        return
     }
 }
 
