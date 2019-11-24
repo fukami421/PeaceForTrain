@@ -12,11 +12,13 @@ struct Login: Codable {
     var count: Int
     var gender: String
     var old: String
+    var id: Int
 
     enum CodingKeys: String, CodingKey {
         case count
         case gender
         case old
+        case id
     }
   
     init()
@@ -24,5 +26,6 @@ struct Login: Codable {
         self.count = 0
         self.gender = ""
         self.old = ""
+        self.id = 0
     }
 }

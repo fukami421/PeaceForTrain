@@ -11,6 +11,7 @@ import RxCocoa
 import Alamofire
 
 class SignUpViewModel {
+    let udf = UserDefaults.standard
     private let disposeBag = DisposeBag()
     let name = BehaviorRelay<String>(value: "")
     let password = BehaviorRelay<String>(value: "")
@@ -49,6 +50,7 @@ class SignUpViewModel {
                     do {
                         let tasks = try decoder.decode(SignUp.self, from: data)
                         canSignUp = tasks.result
+                        self.udf.set(tasks.id, forKey: "id")
                     } catch {
                         print("error:")
                         print(error)

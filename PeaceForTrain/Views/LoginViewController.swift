@@ -66,9 +66,9 @@ class LoginViewController: UIViewController {
             {
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
-                let alertController = Alert.showAlert(title: "エラー", message: "ログインに失敗しました")
                 self.activityIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
+                let alertController = Alert.showAlert(title: "エラー", message: "ログインに失敗しました")
                 self.present(alertController, animated: true)
             }
         }

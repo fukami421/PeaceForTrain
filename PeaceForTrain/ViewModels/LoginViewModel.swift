@@ -45,7 +45,7 @@ class LoginViewModel {
                     do {
                         let tasks = try decoder.decode(Login.self, from: data)
                         resultNum = tasks.count
-                        self.setUserDefault(mail: self.mail.value, gender: tasks.gender, old: tasks.old)
+                        self.setUserDefault(mail: self.mail.value, gender: tasks.gender, old: tasks.old, id: tasks.id)
                         print(resultNum)
                     } catch {
                         print("error:")
@@ -65,11 +65,12 @@ class LoginViewModel {
         return resultNum
     }
     
-    func setUserDefault(mail:String, gender: String, old: String)
+    func setUserDefault(mail:String, gender: String, old: String, id: Int)
     {
         self.udf.set(mail, forKey: "mail")
         self.udf.set(gender, forKey: "gender")
         self.udf.set(old, forKey: "old")
+        self.udf.set(id, forKey: "id")
     }
 }
 

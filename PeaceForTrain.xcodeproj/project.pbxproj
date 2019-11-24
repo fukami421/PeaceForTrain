@@ -13,6 +13,7 @@
 		383657682378E0EF008A92FC /* MyPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383657662378E0EF008A92FC /* MyPageViewController.xib */; };
 		3836576B2378E13C008A92FC /* ExchangeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383657692378E13C008A92FC /* ExchangeHomeViewController.swift */; };
 		3836576C2378E13C008A92FC /* ExchangeHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3836576A2378E13C008A92FC /* ExchangeHomeViewController.xib */; };
+		38486A82238A821D000B38E4 /* TryConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38486A81238A821D000B38E4 /* TryConnect.swift */; };
 		385D2E4B237E8A9900B24AD9 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D2E4A237E8A9900B24AD9 /* MyPageViewModel.swift */; };
 		38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F682377FDDA008D6A52 /* AppDelegate.swift */; };
 		38895F6B2377FDDA008D6A52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38895F6A2377FDDA008D6A52 /* SceneDelegate.swift */; };
@@ -62,6 +63,7 @@
 		383657662378E0EF008A92FC /* MyPageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyPageViewController.xib; sourceTree = "<group>"; };
 		383657692378E13C008A92FC /* ExchangeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeHomeViewController.swift; sourceTree = "<group>"; };
 		3836576A2378E13C008A92FC /* ExchangeHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExchangeHomeViewController.xib; sourceTree = "<group>"; };
+		38486A81238A821D000B38E4 /* TryConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryConnect.swift; sourceTree = "<group>"; };
 		385D2E4A237E8A9900B24AD9 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewModel.swift; sourceTree = "<group>"; };
 		38895F652377FDDA008D6A52 /* PeaceForTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeaceForTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38895F682377FDDA008D6A52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				38FFF32A237EDEE80004C1BD /* Login.swift */,
 				38D9BE89237FCFC700E7A4AC /* SignUp.swift */,
+				38486A81238A821D000B38E4 /* TryConnect.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 			files = (
 				3836576B2378E13C008A92FC /* ExchangeHomeViewController.swift in Sources */,
 				38895FB1237832C9008D6A52 /* LoginViewController.swift in Sources */,
+				38486A82238A821D000B38E4 /* TryConnect.swift in Sources */,
 				38895FB4237834A1008D6A52 /* SignViewController.swift in Sources */,
 				38895FA523780529008D6A52 /* SignUpViewController.swift in Sources */,
 				38895F692377FDDA008D6A52 /* AppDelegate.swift in Sources */,

@@ -10,13 +10,16 @@ import Foundation
 
 struct SignUp: Codable {
     var result: Int
+    var id: Int
 
     enum CodingKeys: String, CodingKey {
         case result
+        case id
     }
   
     init()
     {
         self.result = 2
+        self.id = 0
     }
 }

@@ -16,6 +16,9 @@ class TryConnectViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var outlineLbl: UILabel!
     @IBOutlet weak var distanceLbl: UILabel!
+    @IBOutlet weak var genderLbl: UILabel!
+    @IBOutlet weak var oldLbl: UILabel!
+    @IBOutlet weak var stop: UIButton!
     
     var isGive:Bool = false
     let tryConnectViewModel = TryConnectViewModel()
@@ -58,8 +61,22 @@ class TryConnectViewController: UIViewController {
             })
             .disposed(by: self.disposeBag)
         
+        self.stop.rx.tap
+            .subscribe(onNext: {
+                self.tryConnectViewModel.stopAdvertising()
+            })
+            .disposed(by: self.disposeBag)
+        
         self.tryConnectViewModel.distance
             .bind(to: self.distanceLbl.rx.text)
+            .disposed(by: self.disposeBag)
+        
+        self.tryConnectViewModel.gender
+            .bind(to: self.genderLbl.rx.text)
+            .disposed(by: self.disposeBag)
+
+        self.tryConnectViewModel.old
+            .bind(to: self.oldLbl.rx.text)
             .disposed(by: self.disposeBag)
     }
     
