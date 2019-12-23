@@ -29,7 +29,22 @@ class TryConnectViewController: UIViewController {
         self.activityIndicator.startAnimating()
         self.UISetUp()
         self.bind()
+        self.stop.isHidden = true
+        self.tryConnectViewModel.isGive = self.isGive
+        self.tryConnectViewModel.setUpMonitoring()
     }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        self.viewWillDisappear(animated)
+//        do
+//        {
+//            self.tryConnectViewModel.stopAdvertising()
+//            print("stop")
+//        }catch
+//        {
+//            print("error")
+//        }
+//    }
     
     func UISetUp()
     {

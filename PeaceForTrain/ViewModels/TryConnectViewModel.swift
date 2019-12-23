@@ -29,23 +29,28 @@ class TryConnectViewModel: NSObject, CLLocationManagerDelegate, CBPeripheralMana
 //    var beaconDetails: NSMutableArray!
     
     var isApi = 0
-    
+    var isGive = false
     // 発信用
     var myPeripheralManager: CBPeripheralManager!
 
     override init(){
         super.init()
-        self.setUpMonitoring()
         self.myPeripheralManager = CBPeripheralManager(delegate: self, queue: nil)
     }
     
     // 受信用
-    func setUpMonitoring()
+    public func setUpMonitoring()
     {
         print("CLLocationManager")
+        var uuidString = "48534442-4C45-4144-80C0-1800FFFFFFFF"
+        if self.isGive
+        {
+            uuidString = "58534442-4C45-4144-80C0-1800FFFFFFFF"
+        }
+        print("受信uuid: " + uuidString)
         self.clLocationManager = CLLocationManager()
         self.clLocationManager.delegate = self
-        let uuid:UUID? = UUID(uuidString: "48534442-4C45-4144-80C0-1800FFFFFFFF") // BeaconのUUIDを設定
+        let uuid:UUID? = UUID(uuidString: uuidString) // BeaconのUUIDを設定
         
         //Beacon領域を作成
         if #available(iOS 13.0, *) {
@@ -155,7 +160,13 @@ class TryConnectViewModel: NSObject, CLLocationManagerDelegate, CBPeripheralMana
     
     // 発信用
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        let uuid:UUID? = UUID(uuidString: "48534442-4C45-4144-80C0-1800FFFFFFFF") // BeaconのUUIDを設定
+        var uuidString = "48534442-4C45-4144-80C0-1800FFFFFFFF"
+        if !self.isGive
+        {
+            uuidString = "58534442-4C45-4144-80C0-1800FFFFFFFF"
+        }
+        print("発信uuid: " + uuidString)
+        let uuid:UUID? = UUID(uuidString: uuidString) // BeaconのUUIDを設定
         if peripheral.state == CBManagerState.poweredOn {
             let beaconRegion = CLBeaconRegion(uuid: uuid!, major: 0, minor: 0, identifier: "com.ryu1.myregion")
             let beaconPeripheralData = NSDictionary(dictionary: beaconRegion.peripheralData(withMeasuredPower: nil))

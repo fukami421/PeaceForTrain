@@ -90,7 +90,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWX-co-DGB">
-                    <rect key="frame" x="184" y="488" width="46" height="30"/>
+                    <rect key="frame" x="20" y="488" width="374" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="oxV-I7-XD8"/>
                     </constraints>
@@ -122,8 +122,8 @@
                 <constraint firstItem="Jhi-F9-S0V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jTz-aQ-V6w"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="erG-EL-0KI" secondAttribute="trailing" constant="20" id="knq-d7-RPS"/>
                 <constraint firstItem="Ak1-Q2-ud8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="169" id="ncZ-v3-Yx5"/>
-                <constraint firstItem="lWX-co-DGB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="184" id="oaO-xZ-9Ie"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lWX-co-DGB" secondAttribute="trailing" constant="184" id="vaE-BD-hfW"/>
+                <constraint firstItem="lWX-co-DGB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oaO-xZ-9Ie"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lWX-co-DGB" secondAttribute="trailing" constant="20" id="vaE-BD-hfW"/>
                 <constraint firstItem="Ak1-Q2-ud8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wrG-rY-EUs"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
